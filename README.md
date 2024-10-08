@@ -1,2 +1,2 @@
-# Django_server
+# Django Server
 Test
