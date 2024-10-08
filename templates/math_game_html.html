@@ -1,0 +1,358 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+
+    <title>math game</title>
+    <link rel="stylesheet" href=" {% static 'math_game_css/math_game_css.css' %} ">
+</head>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+
+<body id="math_game_body">
+
+    <div class="absolute" id="phone_tilt">
+        <p>Tilt your phone horizontally to get the best experience...</p>
+    </div>
+
+    <div class="absolute" id="container">
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_2 phone_none" id="container_div1"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_2 phone_none" id="container_div2"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_5 phone_none" id="container_div3"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div4"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div5"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div6"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_5 phone_none" id="container_div7"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_5 phone_none" id="container_div8"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div9"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div10"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_2 phone_none" id="container_div11"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_2 phone_none" id="container_div12"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_2 phone_none" id="container_div13"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_2 phone_none" id="container_div14"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_1 phone_none" id="container_div15"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_1 phone_none" id="container_div16"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_5 phone_none" id="container_div17"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_5 phone_none" id="container_div18"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_5 phone_none" id="container_div19"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_1 phone_none" id="container_div20"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_1 phone_none" id="container_div21"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div22"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div23"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_3 phone_none" id="container_div24"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_3 phone_none" id="container_div25"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_3 phone_none" id="container_div26"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div27"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div28"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_1 phone_none" id="container_div29"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_1 phone_none" id="container_div30"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div31"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div32"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_5 phone_none" id="container_div33"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_3 phone_none" id="container_div34"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_3 phone_none" id="container_div35"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_3 phone_none" id="container_div36"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_3 phone_none" id="container_div37"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div38"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div39"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div40"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_2 phone_none" id="container_div41"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_2 phone_none" id="container_div42"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_2 phone_none" id="container_div43"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_2 phone_none" id="container_div44"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_2 phone_none" id="container_div45"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_2 phone_none" id="container_div46"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_2 phone_none" id="container_div47"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_2 phone_none" id="container_div48"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_2 phone_none" id="container_div49"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_1 phone_none" id="container_div50"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_1 phone_none" id="container_div51"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_1 phone_none" id="container_div52"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_1 phone_none" id="container_div53"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_1 phone_none" id="container_div54"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_1 phone_none" id="container_div55"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_1 phone_none" id="container_div56"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_3 phone_none" id="container_div57"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_3 phone_none" id="container_div58"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_3 phone_none" id="container_div59"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_3 phone_none" id="container_div60"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_3 phone_none" id="container_div61"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_3 phone_none" id="container_div62"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_3 phone_none" id="container_div63"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div64"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div65"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div66"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div67"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div68"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div69"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div70"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div71"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_4 phone_none" id="container_div72"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_5 phone_none" id="container_div73"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_5 phone_none" id="container_div74"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_5 phone_none" id="container_div75"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_5 phone_none" id="container_div76"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_5 phone_none" id="container_div77"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div78"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div79"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div80"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div81"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div82"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div83"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div84"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div85"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_6 phone_none" id="container_div86"></div>
+
+        <div class="absolute_m iteration_m blur_m radius_m colom_1 phone_none" id="container_div87"></div>
+        <div class="absolute_m iteration_m blur_m radius_m colom_1 phone_none" id="container_div88"></div>
+
+    </div>
+
+
+    <a href="{% url 'home' %}">
+        <div class="absolute" id="logo">
+            <div class="absolute" id="logoimg"></div>
+            <p class="p" id="cubicalblock">CubicalBlock</p>
+        </div>
+    </a>
+
+    <div id="behind0" class="behinde absolute">
+        <p class="equal absolute">=</p>
+    </div>
+    <div id="behind1" class="behinde absolute">
+        <p class="equal absolute">=</p>
+    </div>
+    <div id="behind2" class="behinde absolute">
+        <p class="equal absolute">=</p>
+    </div>
+    <div id="behind3" class="behinde absolute">
+        <p class="equal absolute">=</p>
+    </div>
+    <div id="behind4" class="behinde absolute">
+        <p class="equal absolute">=</p>
+    </div>
+    <div id="behind5" class="behinde absolute">
+        <p class="equal absolute">=</p>
+    </div>
+
+    <div id="Outer_container">
+
+        <div class="absolute" id="boxes_container">
+
+            <div class="Item_boxes" id="item0">0</div>
+            <div class="Item_boxes" id="item1">0</div>
+            <div class="Item_boxes" id="item2">0</div>
+            <div class="Item_boxes" id="item3">0</div>
+            <div class="Item_boxes" id="item4">0</div>
+            <div class="Item_boxes" id="item5">0</div>
+            <div class="Item_boxes" id="item6">0</div>
+            <div class="Item_boxes" id="item7">0</div>
+            <div class="Item_boxes" id="item8">0</div>
+            <div class="Item_boxes" id="item9">0</div>
+            <div class="Item_boxes" id="item10">0</div>
+            <div class="Item_boxes" id="item11">0</div>
+            <div class="Item_boxes" id="item12">0</div>
+            <div class="Item_boxes" id="item13">0</div>
+            <div class="Item_boxes" id="item14">0</div>
+            <div class="Item_boxes" id="item15">0</div>
+            <div class="Item_boxes" id="item16">0</div>
+            <div class="Item_boxes" id="item17">0</div>
+
+        </div>
+
+        <div class="absolute" id="results_ground">
+
+            <div class="row1 result_boxes" id="result_answer_0"></div>
+            <button class="BUTTONS row1 left push_for_first_buttons" id="Btn0" class="rounded-primary"
+                onclick="">?</button>
+            <div class="row1 colom_2_number result_boxes" id="result_answer_1"></div>
+            <button class="BUTTONS row1 right push_for_first_buttons" id="Btn1" class="rounded-primary"
+                onclick="">?</button>
+            <div class="row1 colom_3_number result_boxes" id="result_answer_2"></div>
+            <div class="result_boxes colom_4_number absolute" id="result_0"></div>
+
+            <div class="row2 result_boxes" id="result_answer_3"></div>
+            <button class="BUTTONS row2 left" id="Btn2" class="rounded-primary" onclick="">?</button>
+            <div class="row2 colom_2_number result_boxes" id="result_answer_4"></div>
+            <button class="BUTTONS row2 right" id="Btn3" class="rounded-primary" onclick="">?</button>
+            <div class="row2 colom_3_number result_boxes" id="result_answer_5"></div>
+            <div class="result_boxes colom_4_number absolute" id="result_1"></div>
+
+            <div class="row3 result_boxes" id="result_answer_6"></div>
+            <button class="BUTTONS row3 left" id="Btn4" class="rounded-primary" onclick="">?</button>
+            <div class="row3 colom_2_number result_boxes" id="result_answer_7"></div>
+            <button class="BUTTONS row3 right" id="Btn5" class="rounded-primary" onclick="">?</button>
+            <div class="row3 colom_3_number result_boxes" id="result_answer_8"></div>
+            <div class="result_boxes colom_4_number absolute" id="result_2"></div>
+
+            <div class="row4 result_boxes" id="result_answer_9"></div>
+            <button class="BUTTONS row4 left" id="Btn6" class="rounded-primary" onclick="">?</button>
+            <div class="row4 colom_2_number result_boxes" id="result_answer_10"></div>
+            <button class="BUTTONS row4 right" id="Btn7" class="rounded-primary" onclick="">?</button>
+            <div class="row4 colom_3_number result_boxes" id="result_answer_11"></div>
+            <div class="result_boxes colom_4_number absolute" id="result_3"></div>
+
+            <div class="row5 result_boxes" id="result_answer_12"></div>
+            <button class="BUTTONS row5 left" id="Btn8" class="rounded-primary" onclick="">?</button>
+            <div class="row5 colom_2_number result_boxes" id="result_answer_13"></div>
+            <button class="BUTTONS row5 right" id="Btn9" class="rounded-primary" onclick="">?</button>
+            <div class="row5 colom_3_number result_boxes" id="result_answer_14"></div>
+            <div class="result_boxes colom_4_number absolute" id="result_4"></div>
+
+            <div class="row6 result_boxes" id="result_answer_15"></div>
+            <button class="BUTTONS row6 left" id="Btn10" class="rounded-primary" onclick="">?</button>
+            <div class="row6 colom_2_number result_boxes" id="result_answer_16"></div>
+            <button class="BUTTONS row6 right" id="Btn11" class="rounded-primary" onclick="">?</button>
+            <div class="row6 colom_3_number result_boxes" id="result_answer_17"></div>
+            <div class="result_boxes colom_4_number absolute" id="result_5"></div>
+
+        </div>
+
+        <button class="Reset absolute" id="Reset_button">reset all </button>
+        <!-- ✗ ✓ -->
+        <button class="Reset absolute" id="Reset_button0">✗</button>
+        <button class="Reset absolute" id="Reset_button1">✗</button>
+        <button class="Reset absolute" id="Reset_button2">✗</button>
+        <button class="Reset absolute" id="Reset_button3">✗</button>
+        <button class="Reset absolute" id="Reset_button4">✗</button>
+        <button class="Reset absolute" id="Reset_button5">✗</button>
+
+    </div>
+
+    <button id="show_timer">show timer</button>
+
+    <div id="timer">
+
+        <div id="timer_count_up">
+            <p class="labels" id="d"></p>
+            <p class="labels" id="h"></p>
+            <p class="labels" id="m"></p>
+            <p class="labels" id="s"></p>
+        </div>
+
+        <button id="hide_timer">hide timer</button>
+        <button id="reset" value="Reset" onclick="reset_all()">reset</button>
+        <button id="reset" value="Reset" onclick="reset_all()">reset</button>
+
+
+    </div>
+    <!-- <h1 style="z-index: 100; position: absolute; margin-top: 100px;"> user is loged in as {{ user.username }}</h1> -->
+
+    <form id="p-form" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button type="submit" id='submit'> submit</button>
+    </form>
+
+    <canvas>this is a canvas</canvas>
+
+
+    <div class="absolute center border_radius_3vh" id="success_message">
+
+        <div class="absolute center" id="recorded">
+            <p id="recorded_p">Your score has been recorded in our database.</p>
+        </div>
+
+
+        <h1 class="absolute" id="best">Your best score: <p class="absolute" id="best_p">{{ test_object.DB_combined }}</p>
+        </h1>
+        <h1 class="absolute" id="current_time"></h1>
+        <h1 id="Try_Again_Or_Success"></h1>
+
+        <a id="homepage_a" href="{% url 'home' %}">
+            <div class="absolute center border_radius_3vh" id="homepage">
+                <p id="homepage_p">homepage</p>
+            </div>
+        </a>
+
+        <a id="math_game_a" href="{% url 'math_game' %}">
+            <div class="absolute center border_radius_3vh" id="math_game">
+                <p id="math_game_p">try again</p>
+            </div>
+        </a>
+
+
+    </div>
+
+    <!-- this is really important just hidden -->
+    <p id="Best_score">{{ test_object.points }}</p>
+
+</body>
+
+</html>
+
+
+<script src="{% static 'math_game_js/math_game_js.js' %} "></script>
+<script src="{% static 'math_game_js/stop_resize.js' %}"></script>
+<script src="{% static 'math_game_js/timer.js' %}"></script>
+<script src="{% static 'math_game_js/Test.js' %}"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- document.getElementById("cubicalblock").style.Color = "rgb(255, 255, 255)";
+document.getElementById("cubicalblock").style.backgroundColor = "rgb(41, 27, 27)"; -->

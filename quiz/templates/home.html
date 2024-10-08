@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<h1>
+  user is loged in as {{ user.username }} 
+  <a href="{% url 'logout' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Logout</a>
+</h1>
+
+{% else %}
+<a href="{% url 'login_register' %}" style="color:black;">
+  <div class=" absolute border_radius_3vh border login_signup" id="home_login">
+    <p class="p" id="login_p">Login</p>
+  </div>
+</a>
+
+<a href="{% url 'login_register' %}" style="color:black;">
+<div class=" absolute border_radius_3vh border login_signup" id="signup">
+  <p class="p" id="signup_p">Signup</p>
+</div>
+</a>
+{% endif %}
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+<div class="divs border border_radius_3vh" id=play>
+  <p class="p transform just" id="just_play">Play</p>
+</div>
+
+<div class="absolute on_off" id="This_weeks_game">
+  <p class="p" id="This_weeks_game_p">math game</p>
+</div>
+
+<div onclick="" class="absolute border_radius_3vh border on_off" id="start_playing">
+  <p class="p transform" id="start_playing_p">Compete</p>
+</div>
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+<div class="divs border border_radius_3vh" id="practice">
+  <p class="p transform just" id="just_practice">Practice</p>
+</div>
+
+<div onclick="" class="practice_games border absolute border_radius_3vh on_off" id="math_game">
+  <p class="p" id="math_game_p">Missing Figures</p>
+</div>
+<div onclick="" class="practice_games border absolute border_radius_3vh on_off" id="maze_game">
+  <p class="p" id="maze_game_p">Opened Window</p>
+</div>
+<div onclick="" class="practice_games border absolute border_radius_3vh on_off"
+  id="pictures_game">
+  <p class="p" id="pictures_game_p">Sliced Puzzle</p>
+</div>
+<div onclick="" class="practice_games border absolute border_radius_3vh on_off"
+  id="coming_soon1">
+  <p class="p" id="coming_soon1_p">coming soon</p>
+</div>
+<div onclick="" class="practice_games border absolute border_radius_3vh on_off"
+  id="coming_soon2">
+  <p class="p" id="coming_soon2_p">coming soon</p>
+</div>
+<div onclick="" class="practice_games border absolute border_radius_3vh on_off"
+  id="coming_soon3">
+  <p class="p" id="coming_soon3_p">coming soon</p>
+</div>
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+<div class="divs border border_radius_3vh" id="party">
+  <p class="p transform just" id="just_party">Party</p>
+</div>
+
+<div class="absolute on_off" id="join_a_lobby">
+  <p class="p" id="join_a_lobby_p">Join A Lobby</p>
+</div>
+
+<input class="absolute border_radius_3vh border on_off" id="join_a_lobby_code" type="number"
+  placeholder="Enter lobby code">
+
+<div onclick="" class="absolute border border_radius_3vh on_off" id="join_a_lobby_button">
+  <p class="p transform" id="join_a_lobby_button_p">Join</p>
+</div>
+
+<div class="absolute on_off" id="create_a_lobby">
+  <p class="p" id="create_a_lobby_p">or, you can host a lobby</p>
+</div>
+
+<div class="absolute border border_radius_3vh on_off" id="host_a_lobby_button">
+  <p class="p" id="host_a_lobby_p">Host A Lobby</p>
+</div>
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+<div class="divs border border_radius_3vh" id="scoreboard">
+  <p class="p transform just" id="just_scoreboard">Scoreboard</p>
+</div>
+
+<div class="absolute on_off" id="current_competition">
+  <p class="p" id="current_competition_p">math game</p>
+</div>
+
+<div class="absolute on_off" id="your_score">
+  <p class="p" id="your_score_p">Your best score: {{best_score.points}}</p>
+</div>
+
+<div class="absolute on_off" id="your_time">
+  <p class="p" id="your_time_p">Your best time: {{best_score.points}}</p>
+</div>
+
+<div class="absolute border_radius_3vh border on_off" onclick="" id="download_full_scoreboard">
+  <p class="p" id="download_full_scoreboard_p">Download the scoreboard</p>
+</div>
+
+<table class="absolute on_off" id="scoreboard_table">
+
+  <tr>
+      <th class="top_left" id="rank">rank</th>
+      <th id="username">username</th>
+      <th class="top_right" id="points">points</th>
+  </tr>
+  {% for score in object_list %}
+  <tr>
+      <td class="first_row">{{forloop.counter}}</td>
+      <td class="first_row">{{ score.user.username }}</td>
+      <td class="first_row">{{ score.points }}</td>
+  </tr>
+  {% endfor %}
+  
+
+</table>
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+<button class="absolute" id="discord"
+  onclick="document.location='https:ptb.discord.com/widget?id=814192053725954058&theme=dark'">
+</button>
+{% endblock content %}

@@ -1,0 +1,221 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+
+    <link href="{% static 'pictures_game_practice_css/body.css' %} " rel="stylesheet">
+    <link href="{% static 'pictures_game_practice_css/main.css' %} " rel="stylesheet">
+    <title>pictures game</title>
+</head>
+
+
+<body>
+
+    <div class="absolute" id="phone_tilt">
+        <p>Tilt your phone horizontally to get the best experience...</p>
+    </div>
+
+    <!-- background_pictures -->
+    <img class="left BG phone_none" id="left_1" src="{% static 'pictures_game_practice_css/pictures/BG/LEFT1.png' %}">
+    <img class="left BG phone_none" id="left_2" src="{% static 'pictures_game_practice_css/pictures/BG/LEFT2.png' %}">
+    <img class="left BG phone_none" id="left_3" src="{% static 'pictures_game_practice_css/pictures/BG/LEFT3.png' %}">
+    <img class="left BG phone_none" id="left_4" src="{% static 'pictures_game_practice_css/pictures/BG/LEFT4.png' %}">
+
+    <img class="center_vertical BG phone_none" id="center_vertical_1"
+        src="{% static 'pictures_game_practice_css/pictures/BG/CENTER_VERTICAL1.png' %}">
+    <img class="center_vertical BG phone_none" id="center_vertical_2"
+        src="{% static 'pictures_game_practice_css/pictures/BG/CENTER_VERTICAL2.png' %}">
+    <img class="center_vertical BG phone_none" id="center_vertical_3"
+        src="{% static 'pictures_game_practice_css/pictures/BG/CENTER_VERTICAL3.png' %}">
+    <img class="center_vertical BG phone_none" id="center_vertical_4"
+        src="{% static 'pictures_game_practice_css/pictures/BG/CENTER_VERTICAL4.png' %}">
+
+    <img class="right BG phone_none" id="right_1"
+        src="{% static 'pictures_game_practice_css/pictures/BG/RIGHT1.png' %}">
+    <img class="right BG phone_none" id="right_2"
+        src="{% static 'pictures_game_practice_css/pictures/BG/RIGHT2.png' %}">
+    <img class="right BG phone_none" id="right_3"
+        src="{% static 'pictures_game_practice_css/pictures/BG/RIGHT3.png' %}">
+    <img class="right BG phone_none" id="right_4"
+        src="{% static 'pictures_game_practice_css/pictures/BG/RIGHT4.png' %}">
+
+    <img class="top BG phone_none" id="top_1" src="{% static 'pictures_game_practice_css/pictures/BG/TOP1.png' %}">
+    <img class="top BG phone_none" id="top_2" src="{% static 'pictures_game_practice_css/pictures/BG/TOP2.png' %}">
+    <img class="top BG phone_none" id="top_3" src="{% static 'pictures_game_practice_css/pictures/BG/TOP3.png' %}">
+    <img class="top BG phone_none" id="top_4" src="{% static 'pictures_game_practice_css/pictures/BG/TOP4.png' %}">
+
+    <img class="center_horizontal BG phone_none" id="center_horizontal_1"
+        src="{% static 'pictures_game_practice_css/pictures/BG/CENTER_HORIZONTAL1.png' %}">
+    <img class="center_horizontal BG phone_none" id="center_horizontal_2"
+        src="{% static 'pictures_game_practice_css/pictures/BG/CENTER_HORIZONTAL2.png' %}">
+    <img class="center_horizontal BG phone_none" id="center_horizontal_3"
+        src="{% static 'pictures_game_practice_css/pictures/BG/CENTER_HORIZONTAL3.png' %}">
+    <img class="center_horizontal BG phone_none" id="center_horizontal_4"
+        src="{% static 'pictures_game_practice_css/pictures/BG/CENTER_HORIZONTAL4.png' %}">
+
+    <img class="bottom BG phone_none" id="bottom_1"
+        src="{% static 'pictures_game_practice_css/pictures/BG/BOTTOM1.png' %}">
+    <img class="bottom BG phone_none" id="bottom_2"
+        src="{% static 'pictures_game_practice_css/pictures/BG/BOTTOM2.png' %}">
+    <img class="bottom BG phone_none" id="bottom_3"
+        src="{% static 'pictures_game_practice_css/pictures/BG/BOTTOM3.png' %}">
+    <img class="bottom BG phone_none" id="bottom_4"
+        src="{% static 'pictures_game_practice_css/pictures/BG/BOTTOM4.png' %}">
+
+    <div id="dim"></div>
+
+    <div id="container">
+
+        <div class="containers" id="container1">
+
+            <img class="pictures" id="0" src="">
+            <img class="pictures" id="1" src="">
+            <img class="pictures" id="2" src="">
+            <img class="pictures" id="3" src="">
+            <img class="pictures" id="4" src="">
+            <img class="pictures" id="5" src="">
+
+        </div>
+
+        <div class="containers" id="container2">
+
+            <img class="pictures" id="6" src="">
+            <img class="pictures" id="7" src="">
+            <img class="pictures" id="8" src="">
+            <img class="pictures" id="9" src="">
+            <img class="pictures" id="10" src="">
+            <img class="pictures" id="11" src="">
+
+        </div>
+
+        <div class="containers" id="container3">
+
+            <img class="pictures" id="12" src="">
+            <img class="pictures" id="13" src="">
+            <img class="pictures" id="14" src="">
+            <img class="pictures" id="15" src="">
+            <img class="pictures" id="16" src="">
+            <img class="pictures" id="17" src="">
+
+        </div>
+
+        <div class="containers" id="container4">
+
+            <img class="pictures" id="18" src="">
+            <img class="pictures" id="19" src="">
+            <img class="pictures" id="20" src="">
+            <img class="pictures" id="21" src="">
+            <img class="pictures" id="22" src="">
+            <img class="pictures" id="23" src="">
+
+        </div>
+
+
+        <div class="results_ground" id="results_ground1">
+
+            <div class="result_boxes" id="result_answer_1"></div>
+            <div class="result_boxes" id="result_answer_2"></div>
+            <div class="result_boxes" id="result_answer_3"></div>
+            <div class="result_boxes" id="result_answer_4"></div>
+            <div class="result_boxes" id="result_answer_5"></div>
+            <div class="result_boxes" id="result_answer_6"></div>
+
+        </div>
+
+        <div class="results_ground" id="results_ground2">
+
+            <div class="result_boxes" id="result_answer_7"></div>
+            <div class="result_boxes" id="result_answer_8"></div>
+            <div class="result_boxes" id="result_answer_9"></div>
+            <div class="result_boxes" id="result_answer_10"></div>
+            <div class="result_boxes" id="result_answer_11"></div>
+            <div class="result_boxes" id="result_answer_12"></div>
+
+        </div>
+
+        <div class="results_ground" id="results_ground3">
+
+            <div class="result_boxes" id="result_answer_13"></div>
+            <div class="result_boxes" id="result_answer_14"></div>
+            <div class="result_boxes" id="result_answer_15"></div>
+            <div class="result_boxes" id="result_answer_16"></div>
+            <div class="result_boxes" id="result_answer_17"></div>
+            <div class="result_boxes" id="result_answer_18"></div>
+
+        </div>
+
+        <div class="results_ground" id="results_ground4">
+
+            <div class="result_boxes" id="result_answer_19"></div>
+            <div class="result_boxes" id="result_answer_20"></div>
+            <div class="result_boxes" id="result_answer_21"></div>
+            <div class="result_boxes" id="result_answer_22"></div>
+            <div class="result_boxes" id="result_answer_23"></div>
+            <div class="result_boxes" id="result_answer_24"></div>
+
+        </div>
+
+    </div>
+
+    <div id="side_panel_tab">
+        <p id="tab">✗</p>
+    </div>
+
+    <div id="side_panel">
+
+        <!-- value check -->
+        <div class="behind" id="behind1">
+            <p class="answers" id="first_P">first picture</p>
+        </div>
+
+        <div class="behind" id="behind2">
+            <p class="answers" id="second_P">second picture</p>
+        </div>
+
+        <div class="behind" id="behind3">
+            <p class="answers" id="third_P">third picture</p>
+        </div>
+
+        <div class="behind" id="behind4">
+            <p class="answers" id="fourth_P">fourth picture</p>
+        </div>
+
+
+        <!-- timer -->
+        <button id="show_timer">show timer</button>
+
+        <div id="timer">
+
+            <div id="timer_count_up">
+                <p class="labels" id="d"></p>
+                <p class="labels" id="h"></p>
+                <p class="labels" id="m"></p>
+                <p class="labels" id="s"></p>
+            </div>
+
+            <button id="hide_timer">hide timer</button>
+            <button id="reset" value="Reset" onclick="reset_all()">reset</button>
+
+        </div>
+    </div>
+
+    <canvas>this is a canvas</canvas>
+
+
+</body>
+
+
+<script src="{% static 'pictures_game_practice_js/main.js' %}"></script>
+<script src="{% static 'pictures_game_practice_js/timer.js' %}"></script>
+<script src="{% static 'pictures_game_practice_js/stop_resize.js' %}"></script>
+
+</html>

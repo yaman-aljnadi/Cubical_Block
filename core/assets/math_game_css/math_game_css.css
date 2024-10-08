@@ -1,0 +1,2122 @@
+* {
+    font-family: cursive, fantasy, 'Times New Roman';
+}
+
+a:visited {
+    color: black;
+}
+
+html {
+    zoom: 100%;
+}
+
+#math_game_body {
+    margin: 0%;
+    overflow: hidden;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+/* for a lot of elemints */
+.absolute {
+    position: absolute;
+}
+
+#logo {
+    z-index: 80;
+    top: 0.5%;
+    left: 1%;
+    height: 10%;
+    width: 20%;
+}
+
+#logoimg {
+    top: -1vh;
+    left: -5.5vw;
+    height: 11vh;
+    width: 16vw;
+    background-image: url(logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#cubicalblock {
+    position: absolute;
+    font-size: 2.2vw;
+    top: 10%;
+    left: 26%;
+    color: rgb(0, 0, 0);
+}
+
+.equal {
+    color: black;
+    top: 15.4%;
+    left: 76.2%;
+    font-size: 3vw;
+}
+
+.behinde {
+    border-bottom-left-radius: 3vh;
+    border-top-left-radius: 3vh;
+    border-top-right-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+    z-index: 1;
+    background-color: rgba(209, 209, 209, 0.83);
+    left: 35%;
+    height: 15vh;
+    width: 49vw;
+    transition-duration: 0.3s;
+}
+
+#behind0 {
+    margin-top: 0.9vh;
+}
+
+#behind1 {
+    margin-top: 17.3vh;
+}
+
+#behind2 {
+    margin-top: 33.7vh;
+}
+
+#behind3 {
+    margin-top: 50.1vh;
+}
+
+#behind4 {
+    margin-top: 66.5vh;
+}
+
+#behind5 {
+    margin-top: 82.9vh;
+}
+
+#boxes_container {
+    z-index: 2;
+    left: 1.5vw;
+    top: 10vh;
+    margin: 0%;
+    height: 100vh;
+    width: 20vw;
+}
+
+#results_ground {
+    z-index: 1;
+    left: 37%;
+    top: 3vh;
+    height: 100vh;
+    width: 49vw;
+}
+
+.Item_boxes {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    position: flex;
+    border-bottom-left-radius: 1vh;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    background-color: rgb(163, 163, 163);
+    cursor: grab;
+    font-size: 3vw;
+    margin: 0.5%;
+    width: 8.5vw;
+    height: 9.5vh;
+}
+
+.Item_boxes:hover {
+    background-color: rgb(197, 197, 197);
+}
+
+.Item_boxes:active {
+    cursor: grabbing;
+}
+
+.result_boxes {
+    position: absolute;
+    display: inline-block;
+    background-color: rgb(255, 236, 236);
+    text-align: center;
+    border-bottom-left-radius: 1vh;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    font-size: 3vw;
+    margin-left: 1.7vw;
+    margin-right: 1.7vw;
+    width: 8.5vw;
+    height: 9.5vh;
+}
+
+.row1 {
+    top: 0.8vh;
+}
+
+.row2 {
+    top: 17vh;
+}
+
+.row3 {
+    top: 33.6vh;
+}
+
+.row4 {
+    top: 50vh;
+}
+
+.row5 {
+    top: 66.5vh;
+}
+
+.row6 {
+    top: 82.8vh;
+}
+
+.colom_2_number {
+    left: 12.2vw;
+}
+
+.colom_3_number {
+    left: 24.5vw;
+}
+
+.colom_4_number {
+    left: 36vw;
+}
+
+.push_for_first_buttons {
+    top: 1.3vh;
+}
+
+#result_0 {
+    top: 0.8vh;
+}
+
+#result_1 {
+    top: 17vh;
+}
+
+#result_2 {
+    top: 33.6vh;
+}
+
+#result_3 {
+    top: 50vh;
+}
+
+#result_4 {
+    top: 66.5vh;
+}
+
+#result_5 {
+    top: 82.8vh;
+}
+
+/* .spacers{
+    height: 6.45vh;
+} */
+.BUTTONS {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-bottom-left-radius: 4vh;
+    border-top-left-radius: 4vh;
+    border-top-right-radius: 4vh;
+    border-bottom-right-radius: 4vh;
+    /* background-color: rgb(175, 175, 175); */
+    cursor: pointer;
+    font-size: 1.9vw;
+    margin-left: -0.2%;
+    margin-top: 1.8vh;
+    height: 6vh;
+    width: 3vw;
+    transition: 0.3s;
+}
+
+.BUTTONS:hover {
+    background-color: rgb(197, 197, 197);
+}
+
+/*left signs*/
+.left {
+    left: 10.6vw;
+}
+
+/*right signs*/
+.right {
+    left: 22.8vw;
+}
+
+/*reset buttons*/
+.Reset {
+    z-index: 1;
+    border: none;
+    border-bottom-left-radius: 4vh;
+    border-top-left-radius: 4vh;
+    border-top-right-radius: 4vh;
+    border-bottom-right-radius: 4vh;
+    background-color: rgb(255, 138, 138);
+    cursor: pointer;
+    font-size: 2.1vw;
+    margin: 0;
+    margin-left: 35%;
+    height: 15vh;
+    width: 2.78vw;
+    transition: 0.3s;
+}
+
+#Reset_button {
+    top: 4%;
+    left: -12%;
+    width: 8.5vw;
+    height: 9.5vh;
+    font-size: 1.8vw;
+    border-bottom-left-radius: 1vh;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    z-index: 3;
+}
+
+#Reset_button:hover {
+    background-color: rgb(255, 100, 100);
+}
+
+#Reset_button0 {
+    margin-top: 0.9vh;
+}
+
+#Reset_button1 {
+    margin-top: 17.3vh;
+}
+
+#Reset_button2 {
+    margin-top: 33.7vh;
+}
+
+#Reset_button3 {
+    margin-top: 50.1vh;
+}
+
+#Reset_button4 {
+    margin-top: 66.5vh;
+}
+
+#Reset_button5 {
+    margin-top: 82.9vh;
+}
+
+/*Reset animation*/
+.test_id {
+    transition: 0.3s;
+}
+
+/* timer */
+#timer {
+    position: absolute;
+    top: 17vh;
+    left: 22.5%;
+    height: 18.3vh;
+    width: 10vw;
+    border-bottom-left-radius: 2.5vh;
+    border-top-left-radius: 2.5vh;
+    border-bottom-right-radius: 2.5vh;
+    border-top-right-radius: 2.5vh;
+    background-color: rgb(148, 148, 148);
+}
+
+.labels {
+    font-size: 1.2vw;
+    margin: 0%;
+    padding-top: 0.6vh;
+    display: inline-block;
+}
+
+#timer_count_up {
+    position: absolute;
+    text-align: center;
+    top: 1vh;
+    left: 1vw;
+    height: 5vh;
+    width: 8vw;
+    border-bottom-left-radius: 2.5vh;
+    border-top-left-radius: 2.5vh;
+    border-bottom-right-radius: 2.5vh;
+    border-top-right-radius: 2.5vh;
+    background-color: rgb(238, 238, 238);
+}
+
+#hide_timer {
+    font-size: 1.2vw;
+    position: absolute;
+    border-color: black;
+    border-width: 1%;
+    right: 1vw;
+    top: 7vh;
+    height: 5vh;
+    width: 8vw;
+    border-bottom-left-radius: 2.5vh;
+    border-top-left-radius: 2.5vh;
+    border-bottom-right-radius: 2.5vh;
+    border-top-right-radius: 2.5vh;
+    background-color: rgb(238, 238, 238);
+    transition: 0.5s;
+}
+
+#hide_timer:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+#reset {
+    font-size: 1.2vw;
+    position: absolute;
+    border-color: black;
+    border-width: 1%;
+    right: 1vw;
+    top: 12.5vh;
+    height: 5vh;
+    width: 8vw;
+    border-bottom-left-radius: 2.5vh;
+    border-top-left-radius: 2.5vh;
+    border-bottom-right-radius: 2.5vh;
+    border-top-right-radius: 2.5vh;
+    background-color: rgb(238, 238, 238);
+    transition: 0.5s;
+}
+
+#reset:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+#show_timer {
+    font-size: 1.2vw;
+    z-index: 9;
+    position: absolute;
+    border-color: black;
+    border-width: 1%;
+    top: 21%;
+    left: 23.5%;
+    height: 5vh;
+    width: 8vw;
+    border-bottom-left-radius: 2.5vh;
+    border-top-left-radius: 2.5vh;
+    border-bottom-right-radius: 2.5vh;
+    border-top-right-radius: 2.5vh;
+    background-color: rgb(238, 238, 238);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#show_timer:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+#timer {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+/* success message */
+.absolute {
+    position: absolute;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border_radius_3vh {
+    border-bottom-left-radius: 3vh;
+    border-top-left-radius: 3vh;
+    border-top-right-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+}
+
+#success_message {
+    background-color: rgba(218, 218, 218, 0.884);
+    height: 80vh;
+    width: 50vw;
+    top: 10vh;
+    left: 25vw;
+    opacity: 0;
+    transition: 1s;
+    z-index: -10;
+}
+
+#recorded {
+    top: 4vh;
+}
+
+#recorded_p {
+    font-size: 2vw;
+}
+
+#best{
+    top: 20vh;
+    left: 1.8vw;
+}
+
+#best_p{
+    top: -0.01vh;
+    left: 18vw;
+}
+
+#current_time{
+    top: 28vh;
+    left: 1.8vw;
+}
+
+#Try_Again_Or_SuccessP{
+    top: 36vh;
+    left: 1.8vw;
+}
+
+#homepage_a {
+    text-decoration: none;
+}
+
+#homepage {
+    background-color: white;
+    border: solid;
+    border-color: rgb(150, 150, 150);
+    border-width: 0.5vh;
+    height: 12vh;
+    width: 12vw;
+    top: 65vh;
+    left: 10vw;
+    transition: 0.2s;
+}
+
+#homepage:hover {
+    border-color: rgb(83, 83, 83);
+}
+
+#homepage_p {
+    pointer-events: none;
+    color: rgb(39, 63, 197);
+    font-size: 2vw;
+}
+
+#math_game_a {
+    text-decoration: none;
+}
+
+#math_game {
+    background-color: white;
+    border: solid;
+    border-color: rgb(150, 150, 150);
+    border-width: 0.5vh;
+    height: 12vh;
+    width: 12vw;
+    top: 65vh;
+    right: 10vw;
+    transition: 0.2s;
+}
+
+#math_game:hover {
+    border-color: rgb(83, 83, 83);
+}
+
+#math_game_p {
+    pointer-events: none;
+    color: rgb(39, 197, 65);
+    font-size: 2vw;
+}
+
+
+/* //////////////////////////////////////////// */
+/* this is for the background */
+#container {
+    background-color: rgb(233, 233, 233);
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    z-index: 0;
+}
+
+.absolute_m {
+    position: absolute;
+}
+
+.iteration_m {
+    animation-iteration-count: infinite;
+}
+
+.blur_m {
+    filter: blur(7px);
+}
+
+.radius_m {
+    border-bottom-left-radius: 1vh;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+}
+
+.colom_1 {
+    animation-duration: 55s;
+    animation-delay: 12s;
+}
+
+.colom_2 {
+    animation-duration: 50s;
+    animation-delay: 0s;
+}
+
+.colom_3 {
+    animation-duration: 30s;
+    animation-delay: 0s;
+}
+
+.colom_4 {
+    animation-duration: 45s;
+    animation-delay: 8s;
+}
+
+.colom_5 {
+    animation-duration: 40s;
+    animation-delay: 9s;
+}
+
+.colom_6 {
+    animation-duration: 35s;
+    animation-delay: 3s;
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 2 */
+#container_div1 {
+    transform: rotate(-45deg);
+    background-color: rgb(65, 65, 240);
+    height: 8vh;
+    width: 18vw;
+    top: -20vh;
+    left: 15vw;
+    animation-name: container_div1;
+}
+
+@keyframes container_div1 {
+    100% {
+        top: 420vh;
+    }
+}
+
+#container_div2 {
+    transform: rotate(45deg);
+    background-color: rgb(65, 65, 240);
+    height: 8vh;
+    width: 18vw;
+    top: -20vh;
+    left: 15vw;
+    animation-name: container_div2;
+}
+
+@keyframes container_div2 {
+    100% {
+        top: 420vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 5 */
+#container_div3 {
+    background-color: rgb(240, 65, 65);
+    height: 8vh;
+    width: 15vw;
+    top: -25vh;
+    left: 67vw;
+    animation-name: container_div3;
+}
+
+@keyframes container_div3 {
+    100% {
+        top: 420vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 4 */
+#container_div4 {
+    background-color: rgb(39, 202, 47);
+    height: 8vh;
+    width: 15vw;
+    top: -20vh;
+    left: 50vw;
+    animation-name: container_div4;
+}
+
+@keyframes container_div4 {
+    100% {
+        top: 420vh;
+    }
+}
+
+#container_div5 {
+    background-color: rgb(39, 202, 47);
+    height: 7vh;
+    width: 3.5vw;
+    top: -29vh;
+    left: 55.75vw;
+    animation-name: container_div5;
+}
+
+@keyframes container_div5 {
+    100% {
+        top: 410vh;
+    }
+}
+
+#container_div6 {
+    background-color: rgb(39, 202, 47);
+    height: 7vh;
+    width: 3.5vw;
+    top: -10vh;
+    left: 55.75vw;
+    animation-name: container_div6;
+}
+
+@keyframes container_div6 {
+    100% {
+        top: 431vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 5 */
+#container_div7 {
+    transform: rotate(90deg);
+    background-color: rgb(52, 49, 204);
+    height: 10vh;
+    width: 18vw;
+    top: -60vh;
+    left: 70vw;
+    animation-name: container_div7;
+}
+
+@keyframes container_div7 {
+    100% {
+        top: 380vh;
+    }
+}
+
+#container_div8 {
+    background-color: rgb(52, 49, 204);
+    height: 10vh;
+    width: 18vw;
+    top: -60vh;
+    left: 70vw;
+    animation-name: container_div8;
+}
+
+@keyframes container_div8 {
+    100% {
+        top: 380vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 6 */
+#container_div9 {
+    transform: rotate(-45deg);
+    background-color: rgb(225, 241, 74);
+    height: 7vh;
+    width: 17vw;
+    top: -20vh;
+    left: 85vw;
+    animation-name: container_div9;
+}
+
+@keyframes container_div9 {
+    100% {
+        top: 420vh;
+    }
+}
+
+#container_div10 {
+    transform: rotate(45deg);
+    background-color: rgb(225, 241, 74);
+    height: 7vh;
+    width: 17vw;
+    top: -20vh;
+    left: 85vw;
+    animation-name: container_div10;
+}
+
+@keyframes container_div10 {
+    100% {
+        top: 420vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 2 */
+#container_div11 {
+    background-color: rgb(212, 44, 58);
+    height: 8vh;
+    width: 15vw;
+    top: -60vh;
+    left: 25vw;
+    animation-name: container_div11;
+}
+
+@keyframes container_div11 {
+    100% {
+        top: 380vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 2 */
+#container_div12 {
+    background-color: rgb(28, 76, 209);
+    height: 8vh;
+    width: 15vw;
+    top: -100vh;
+    left: 20vw;
+    animation-name: container_div12;
+}
+
+@keyframes container_div12 {
+    100% {
+        top: 340vh;
+    }
+}
+
+#container_div13 {
+    background-color: rgb(28, 76, 209);
+    height: 7vh;
+    width: 3.5vw;
+    top: -109vh;
+    left: 25.75vw;
+    animation-name: container_div13;
+}
+
+@keyframes container_div13 {
+    100% {
+        top: 330vh;
+    }
+}
+
+#container_div14 {
+    background-color: rgb(28, 76, 209);
+    height: 7vh;
+    width: 3.5vw;
+    top: -90vh;
+    left: 25.75vw;
+    animation-name: container_div14;
+}
+
+@keyframes container_div14 {
+    100% {
+        top: 351vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 1 */
+#container_div15 {
+    transform: rotate(90deg);
+    background-color: rgb(33, 204, 62);
+    height: 10vh;
+    width: 18vw;
+    top: -25vh;
+    left: 1vw;
+    animation-name: container_div15;
+}
+
+@keyframes container_div15 {
+    100% {
+        top: 420vh;
+    }
+}
+
+#container_div16 {
+    background-color: rgb(33, 204, 62);
+    height: 10vh;
+    width: 18vw;
+    top: -25vh;
+    left: 1vw;
+    animation-name: container_div16;
+}
+
+@keyframes container_div16 {
+    100% {
+        top: 420vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 5 */
+#container_div17 {
+    transform: rotate(-45deg);
+    background-color: rgb(241, 74, 74);
+    height: 5vh;
+    width: 11.25vw;
+    top: -100vh;
+    left: 67vw;
+    animation-name: container_div17;
+}
+
+@keyframes container_div17 {
+    100% {
+        top: 340vh;
+    }
+}
+
+#container_div18 {
+    transform: rotate(45deg);
+    background-color: rgb(241, 74, 74);
+    height: 5vh;
+    width: 11.25vw;
+    top: -100vh;
+    left: 67vw;
+    animation-name: container_div18;
+}
+
+@keyframes container_div18 {
+    100% {
+        top: 340vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 5 */
+#container_div19 {
+    background-color: rgb(75, 44, 212);
+    height: 9vh;
+    width: 16vw;
+    top: -140vh;
+    left: 68vw;
+    animation-name: container_div19;
+}
+
+@keyframes container_div19 {
+    100% {
+        top: 300vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 1 */
+#container_div20 {
+    transform: rotate(-45deg);
+    background-color: rgb(186, 47, 221);
+    height: 8vh;
+    width: 18vw;
+    top: -60vh;
+    left: 0.5vw;
+    animation-name: container_div20;
+}
+
+@keyframes container_div20 {
+    100% {
+        top: 380vh;
+    }
+}
+
+#container_div21 {
+    transform: rotate(45deg);
+    background-color: rgb(186, 47, 221);
+    height: 8vh;
+    width: 18vw;
+    top: -60vh;
+    left: 0.5vw;
+    animation-name: container_div21;
+}
+
+@keyframes container_div21 {
+    100% {
+        top: 380vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 4 */
+#container_div22 {
+    transform: rotate(90deg);
+    background-color: rgb(48, 231, 48);
+    height: 12vh;
+    width: 20vw;
+    top: -60vh;
+    left: 42vw;
+    animation-name: container_div22;
+}
+
+@keyframes container_div22 {
+    100% {
+        top: 380vh;
+    }
+}
+
+#container_div23 {
+    background-color: rgb(48, 231, 48);
+    height: 12vh;
+    width: 20vw;
+    top: -60vh;
+    left: 42vw;
+    animation-name: container_div23;
+}
+
+@keyframes container_div23 {
+    100% {
+        top: 380vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 3 */
+#container_div24 {
+    background-color: rgb(160, 59, 228);
+    height: 9vh;
+    width: 16vw;
+    top: -20vh;
+    left: 32vw;
+    animation-name: container_div24;
+}
+
+@keyframes container_div24 {
+    100% {
+        top: 420vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 3 */
+#container_div25 {
+    transform: rotate(90deg);
+    background-color: rgb(204, 231, 48);
+    height: 8vh;
+    width: 13.3vw;
+    top: -60vh;
+    left: 32vw;
+    animation-name: container_div25;
+}
+
+@keyframes container_div25 {
+    100% {
+        top: 380vh;
+    }
+}
+
+#container_div26 {
+    background-color: rgb(204, 231, 48);
+    height: 8vh;
+    width: 13.3vw;
+    top: -60vh;
+    left: 32vw;
+    animation-name: container_div26;
+}
+
+@keyframes container_div26 {
+    100% {
+        top: 380vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 4 */
+#container_div27 {
+    transform: rotate(-45deg);
+    background-color: rgb(50, 47, 221);
+    height: 5vh;
+    width: 11.25vw;
+    top: -100vh;
+    left: 45vw;
+    animation-name: container_div27;
+}
+
+@keyframes container_div27 {
+    100% {
+        top: 340vh;
+    }
+}
+
+#container_div28 {
+    transform: rotate(45deg);
+    background-color: rgb(50, 47, 221);
+    height: 5vh;
+    width: 11.25vw;
+    top: -100vh;
+    left: 45vw;
+    animation-name: container_div28;
+}
+
+@keyframes container_div28 {
+    100% {
+        top: 340vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 1 */
+#container_div29 {
+    transform: rotate(-45deg);
+    background-color: rgb(214, 26, 26);
+    height: 5vh;
+    width: 11.25vw;
+    top: -100vh;
+    left: 3vw;
+    animation-name: container_div29;
+}
+
+@keyframes container_div29 {
+    100% {
+        top: 340vh;
+    }
+}
+
+#container_div30 {
+    transform: rotate(45deg);
+    background-color: rgb(214, 26, 26);
+    height: 5vh;
+    width: 11.25vw;
+    top: -100vh;
+    left: 3vw;
+    animation-name: container_div30;
+}
+
+@keyframes container_div30 {
+    100% {
+        top: 340vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 6 */
+#container_div31 {
+    transform: rotate(-45deg);
+    background-color: rgb(248, 21, 21);
+    height: 6vh;
+    width: 17vw;
+    top: -60vh;
+    left: 80vw;
+    animation-name: container_div31;
+}
+
+@keyframes container_div31 {
+    100% {
+        top: 380vh;
+    }
+}
+
+#container_div32 {
+    transform: rotate(45deg);
+    background-color: rgb(248, 21, 21);
+    height: 6vh;
+    width: 17vw;
+    top: -60vh;
+    left: 80vw;
+    animation-name: container_div32;
+}
+
+@keyframes container_div32 {
+    100% {
+        top: 380vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 5 */
+#container_div33 {
+    background-color: rgb(240, 34, 34);
+    height: 8vh;
+    width: 14.22vw;
+    top: -200vh;
+    left: 60vw;
+    animation-name: container_div33;
+}
+
+@keyframes container_div33 {
+    100% {
+        top: 260vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 3 */
+#container_div34 {
+    transform: rotate(-45deg);
+    background-color: rgb(165, 21, 248);
+    height: 4vh;
+    width: 9vw;
+    top: -100vh;
+    left: 32vw;
+    animation-name: container_div34;
+}
+
+@keyframes container_div34 {
+    100% {
+        top: 340vh;
+    }
+}
+
+#container_div35 {
+    transform: rotate(45deg);
+    background-color: rgb(165, 21, 248);
+    height: 4vh;
+    width: 9vw;
+    top: -100vh;
+    left: 32vw;
+    animation-name: container_div35;
+}
+
+@keyframes container_div35 {
+    100% {
+        top: 340vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 3 */
+#container_div36 {
+    transform: rotate(90deg);
+    background-color: rgb(177, 216, 37);
+    height: 5vh;
+    width: 11.25vw;
+    top: -140vh;
+    left: 38vw;
+    animation-name: container_div36;
+}
+
+@keyframes container_div36 {
+    100% {
+        top: 300vh;
+    }
+}
+
+#container_div37 {
+    background-color: rgb(177, 216, 37);
+    height: 5vh;
+    width: 11.25vw;
+    top: -140vh;
+    left: 38vw;
+    animation-name: container_div37;
+}
+
+@keyframes container_div37 {
+    100% {
+        top: 300vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 6 */
+#container_div38 {
+    background-color: rgb(202, 50, 39);
+    height: 7vh;
+    width: 13.125vw;
+    top: -100vh;
+    left: 83vw;
+    animation-name: container_div38;
+}
+
+@keyframes container_div38 {
+    100% {
+        top: 340vh;
+    }
+}
+
+#container_div39 {
+    background-color: rgb(202, 50, 39);
+    height: 6vh;
+    width: 3vw;
+    top: -109vh;
+    left: 88.06vw;
+    animation-name: container_div39;
+}
+
+@keyframes container_div39 {
+    100% {
+        top: 330vh;
+    }
+}
+
+#container_div40 {
+    background-color: rgb(202, 50, 39);
+    height: 6vh;
+    width: 3vw;
+    top: -90vh;
+    left: 88.06vw;
+    animation-name: container_div40;
+}
+
+@keyframes container_div40 {
+    100% {
+        top: 351vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 2 */
+#container_div41 {
+    transform: rotate(90deg);
+    background-color: rgb(231, 54, 48);
+    height: 6vh;
+    width: 10vw;
+    top: -140vh;
+    left: 18vw;
+    animation-name: container_div41;
+}
+
+@keyframes container_div41 {
+    100% {
+        top: 300vh;
+    }
+}
+
+#container_div42 {
+    background-color: rgb(231, 54, 48);
+    height: 6vh;
+    width: 10vw;
+    top: -140vh;
+    left: 18vw;
+    animation-name: container_div42;
+}
+
+@keyframes container_div42 {
+    100% {
+        top: 300vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 2 */
+#container_div43 {
+    transform: rotate(90deg);
+    background-color: rgb(48, 219, 231);
+    height: 6vh;
+    width: 10vw;
+    top: -180vh;
+    left: 20vw;
+    animation-name: container_div43;
+}
+
+@keyframes container_div43 {
+    100% {
+        top: 260vh;
+    }
+}
+
+#container_div44 {
+    background-color: rgb(48, 219, 231);
+    height: 6vh;
+    width: 10vw;
+    top: -180vh;
+    left: 20vw;
+    animation-name: container_div44;
+}
+
+@keyframes container_div44 {
+    100% {
+        top: 260vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 2 */
+#container_div45 {
+    transform: rotate(45deg);
+    background-color: rgb(201, 48, 231);
+    height: 6vh;
+    width: 10vw;
+    top: -220vh;
+    left: 20vw;
+    animation-name: container_div45;
+}
+
+@keyframes container_div45 {
+    100% {
+        top: 220vh;
+    }
+}
+
+#container_div46 {
+    transform: rotate(-45deg);
+    background-color: rgb(201, 48, 231);
+    height: 6vh;
+    width: 10vw;
+    top: -220vh;
+    left: 20vw;
+    animation-name: container_div46;
+}
+
+@keyframes container_div46 {
+    100% {
+        top: 220vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 2 */
+#container_div47 {
+    background-color: rgb(231, 130, 48);
+    height: 6vh;
+    width: 10vw;
+    top: -260vh;
+    left: 20vw;
+    animation-name: container_div47;
+}
+
+@keyframes container_div47 {
+    100% {
+        top: 180vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 2 */
+#container_div48 {
+    transform: rotate(45deg);
+    background-color: rgb(48, 231, 48);
+    height: 6vh;
+    width: 10vw;
+    top: -300vh;
+    left: 18vw;
+    animation-name: container_div48;
+}
+
+@keyframes container_div48 {
+    100% {
+        top: 140vh;
+    }
+}
+
+#container_div49 {
+    transform: rotate(-45deg);
+    background-color: rgb(48, 231, 48);
+    height: 6vh;
+    width: 10vw;
+    top: -300vh;
+    left: 18vw;
+    animation-name: container_div49;
+}
+
+@keyframes container_div49 {
+    100% {
+        top: 140vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 1 */
+#container_div50 {
+    transform: rotate(45deg);
+    background-color: rgb(48, 231, 48);
+    height: 6vh;
+    width: 10vw;
+    top: -140vh;
+    left: 3vw;
+    animation-name: container_div50;
+}
+
+@keyframes container_div50 {
+    100% {
+        top: 300vh;
+    }
+}
+
+#container_div51 {
+    transform: rotate(-45deg);
+    background-color: rgb(48, 231, 48);
+    height: 6vh;
+    width: 10vw;
+    top: -140vh;
+    left: 3vw;
+    animation-name: container_div51;
+}
+
+@keyframes container_div51 {
+    100% {
+        top: 300vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 1 */
+#container_div52 {
+    background-color: rgb(48, 231, 222);
+    height: 6vh;
+    width: 10vw;
+    top: -180vh;
+    left: 6vw;
+    animation-name: container_div52;
+}
+
+@keyframes container_div52 {
+    100% {
+        top: 260vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 1 */
+#container_div53 {
+    transform: rotate(-90deg);
+    background-color: rgb(190, 36, 30);
+    height: 10vh;
+    width: 24vw;
+    top: -220vh;
+    left: 4vw;
+    animation-name: container_div53;
+}
+
+@keyframes container_div53 {
+    100% {
+        top: 220vh;
+    }
+}
+
+#container_div54 {
+    background-color: rgb(190, 36, 30);
+    height: 10vh;
+    width: 24vw;
+    top: -220vh;
+    left: 4vw;
+    animation-name: container_div54;
+}
+
+@keyframes container_div54 {
+    100% {
+        top: 220vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 1 */
+#container_div55 {
+    transform: rotate(45deg);
+    background-color: rgb(105, 30, 190);
+    height: 5vh;
+    width: 12vw;
+    top: -260vh;
+    left: 4vw;
+    animation-name: container_div55;
+}
+
+@keyframes container_div55 {
+    100% {
+        top: 180vh;
+    }
+}
+
+#container_div56 {
+    transform: rotate(-45deg);
+    background-color: rgb(105, 30, 190);
+    height: 5vh;
+    width: 12vw;
+    top: -260vh;
+    left: 4vw;
+    animation-name: container_div56;
+}
+
+@keyframes container_div56 {
+    100% {
+        top: 180vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 3 */
+#container_div57 {
+    transform: rotate(45deg);
+    background-color: rgb(190, 30, 155);
+    height: 7vh;
+    width: 16vw;
+    top: -180vh;
+    left: 30vw;
+    animation-name: container_div57;
+}
+
+@keyframes container_div57 {
+    100% {
+        top: 260vh;
+    }
+}
+
+#container_div58 {
+    transform: rotate(-45deg);
+    background-color: rgb(190, 30, 155);
+    height: 7vh;
+    width: 16vw;
+    top: -180vh;
+    left: 30vw;
+    animation-name: container_div58;
+}
+
+@keyframes container_div58 {
+    100% {
+        top: 260vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 3 */
+#container_div59 {
+    transform: rotate(90deg);
+    background-color: rgb(65, 30, 190);
+    height: 7vh;
+    width: 16vw;
+    top: -220vh;
+    left: 32vw;
+    animation-name: container_div59;
+}
+
+@keyframes container_div59 {
+    100% {
+        top: 220vh;
+    }
+}
+
+#container_div60 {
+    background-color: rgb(65, 30, 190);
+    height: 7vh;
+    width: 16vw;
+    top: -220vh;
+    left: 32vw;
+    animation-name: container_div60;
+}
+
+@keyframes container_div60 {
+    100% {
+        top: 220vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 3 */
+#container_div61 {
+    background-color: rgb(218, 221, 22);
+    height: 7vh;
+    width: 16vw;
+    top: -260vh;
+    left: 34vw;
+    animation-name: container_div61;
+}
+
+@keyframes container_div61 {
+    100% {
+        top: 180vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 3 */
+#container_div62 {
+    transform: rotate(90deg);
+    background-color: rgb(207, 26, 102);
+    height: 8vh;
+    width: 17vw;
+    top: -300vh;
+    left: 31vw;
+    animation-name: container_div62;
+}
+
+@keyframes container_div62 {
+    100% {
+        top: 140vh;
+    }
+}
+
+#container_div63 {
+    background-color: rgb(207, 26, 102);
+    height: 8vh;
+    width: 17vw;
+    top: -300vh;
+    left: 31vw;
+    animation-name: container_div63;
+}
+
+@keyframes container_div63 {
+    100% {
+        top: 140vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 4 */
+#container_div64 {
+    transform: rotate(45deg);
+    background-color: rgb(26, 186, 207);
+    height: 8vh;
+    width: 17vw;
+    top: -140vh;
+    left: 51vw;
+    animation-name: container_div64;
+}
+
+@keyframes container_div64 {
+    100% {
+        top: 300vh;
+    }
+}
+
+#container_div65 {
+    transform: rotate(-45deg);
+    background-color: rgb(26, 186, 207);
+    height: 8vh;
+    width: 17vw;
+    top: -140vh;
+    left: 51vw;
+    animation-name: container_div65;
+}
+
+@keyframes container_div65 {
+    100% {
+        top: 300vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 4 */
+#container_div66 {
+    background-color: rgb(207, 26, 26);
+    height: 8vh;
+    width: 19vw;
+    top: -180vh;
+    left: 48vw;
+    animation-name: container_div66;
+}
+
+@keyframes container_div66 {
+    100% {
+        top: 260vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 4 */
+#container_div67 {
+    transform: rotate(45deg);
+    background-color: rgb(32, 207, 26);
+    height: 7vh;
+    width: 18vw;
+    top: -220vh;
+    left: 53vw;
+    animation-name: container_div67;
+}
+
+@keyframes container_div67 {
+    100% {
+        top: 220vh;
+    }
+}
+
+#container_div68 {
+    transform: rotate(-45deg);
+    background-color: rgb(32, 207, 26);
+    height: 7vh;
+    width: 18vw;
+    top: -220vh;
+    left: 53vw;
+    animation-name: container_div68;
+}
+
+@keyframes container_div68 {
+    100% {
+        top: 220vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 4 */
+#container_div69 {
+    transform: rotate(90deg);
+    background-color: rgb(26, 38, 207);
+    height: 8vh;
+    width: 16vw;
+    top: -260vh;
+    left: 50vw;
+    animation-name: container_div69;
+}
+
+@keyframes container_div69 {
+    100% {
+        top: 180vh;
+    }
+}
+
+#container_div70 {
+    background-color: rgb(26, 38, 207);
+    height: 8vh;
+    width: 16vw;
+    top: -260vh;
+    left: 50vw;
+    animation-name: container_div70;
+}
+
+@keyframes container_div70 {
+    100% {
+        top: 180vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 4 */
+#container_div71 {
+    transform: rotate(45deg);
+    background-color: rgb(204, 207, 26);
+    height: 7vh;
+    width: 18vw;
+    top: -300vh;
+    left: 55vw;
+    animation-name: container_div71;
+}
+
+@keyframes container_div71 {
+    100% {
+        top: 140vh;
+    }
+}
+
+#container_div72 {
+    transform: rotate(-45deg);
+    background-color: rgb(204, 207, 26);
+    height: 7vh;
+    width: 18vw;
+    top: -300vh;
+    left: 55vw;
+    animation-name: container_div72;
+}
+
+@keyframes container_div72 {
+    100% {
+        top: 140vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 5 */
+#container_div73 {
+    transform: rotate(-45deg);
+    background-color: rgb(74, 241, 227);
+    height: 5vh;
+    width: 11.25vw;
+    top: -220vh;
+    left: 67vw;
+    animation-name: container_div73;
+}
+
+@keyframes container_div73 {
+    100% {
+        top: 220vh;
+    }
+}
+
+#container_div74 {
+    transform: rotate(45deg);
+    background-color: rgb(74, 241, 227);
+    height: 5vh;
+    width: 11.25vw;
+    top: -220vh;
+    left: 67vw;
+    animation-name: container_div74;
+}
+
+@keyframes container_div74 {
+    100% {
+        top: 220vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 5 */
+#container_div75 {
+    transform: rotate(90deg);
+    background-color: rgb(241, 74, 74);
+    height: 7vh;
+    width: 18vw;
+    top: -260vh;
+    left: 70vw;
+    animation-name: container_div75;
+}
+
+@keyframes container_div75 {
+    100% {
+        top: 180vh;
+    }
+}
+
+#container_div76 {
+    background-color: rgb(241, 74, 74);
+    height: 7vh;
+    width: 18vw;
+    top: -260vh;
+    left: 70vw;
+    animation-name: container_div76;
+}
+
+@keyframes container_div76 {
+    100% {
+        top: 180vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 5 */
+#container_div77 {
+    background-color: rgb(148, 44, 209);
+    height: 8vh;
+    width: 19vw;
+    top: -300vh;
+    left: 68vw;
+    animation-name: container_div77;
+}
+
+@keyframes container_div77 {
+    100% {
+        top: 140vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 6 */
+#container_div78 {
+    transform: rotate(90deg);
+    background-color: rgb(241, 74, 74);
+    height: 5vh;
+    width: 11vw;
+    top: -140vh;
+    left: 85vw;
+    animation-name: container_div78;
+}
+
+@keyframes container_div78 {
+    100% {
+        top: 300vh;
+    }
+}
+
+#container_div79 {
+    background-color: rgb(241, 74, 74);
+    height: 5vh;
+    width: 11vw;
+    top: -140vh;
+    left: 85vw;
+    animation-name: container_div79;
+}
+
+@keyframes container_div79 {
+    100% {
+        top: 300vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 6 */
+#container_div80 {
+    transform: rotate(45deg);
+    background-color: rgb(52, 37, 187);
+    height: 8vh;
+    width: 13vw;
+    top: -180vh;
+    left: 82vw;
+    animation-name: container_div80;
+}
+
+@keyframes container_div80 {
+    100% {
+        top: 260vh;
+    }
+}
+
+#container_div81 {
+    transform: rotate(-45deg);
+    background-color: rgb(52, 37, 187);
+    height: 8vh;
+    width: 13vw;
+    top: -180vh;
+    left: 82vw;
+    animation-name: container_div81;
+}
+
+@keyframes container_div81 {
+    100% {
+        top: 260vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 6 */
+#container_div82 {
+    transform: rotate(90deg);
+    background-color: rgb(149, 24, 199);
+    height: 9vh;
+    width: 17vw;
+    top: -220vh;
+    left: 88vw;
+    animation-name: container_div82;
+}
+
+@keyframes container_div82 {
+    100% {
+        top: 220vh;
+    }
+}
+
+#container_div83 {
+    background-color: rgb(149, 24, 199);
+    height: 9vh;
+    width: 14vw;
+    top: -220vh;
+    left: 88vw;
+    animation-name: container_div83;
+}
+
+@keyframes container_div83 {
+    100% {
+        top: 220vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 6 */
+#container_div84 {
+    background-color: rgb(24, 199, 24);
+    height: 7vh;
+    width: 16vw;
+    top: -260vh;
+    left: 79vw;
+    animation-name: container_div84;
+}
+
+@keyframes container_div84 {
+    100% {
+        top: 180vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 6 */
+#container_div85 {
+    transform: rotate(45deg);
+    background-color: rgb(21, 216, 216);
+    height: 8vh;
+    width: 17vw;
+    top: -300vh;
+    left: 83vw;
+    animation-name: container_div85;
+}
+
+@keyframes container_div85 {
+    100% {
+        top: 140vh;
+    }
+}
+
+#container_div86 {
+    transform: rotate(-45deg);
+    background-color: rgb(21, 216, 216);
+    height: 8vh;
+    width: 17vw;
+    top: -300vh;
+    left: 83vw;
+    animation-name: container_div86;
+}
+
+@keyframes container_div86 {
+    100% {
+        top: 140vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+/* this is colom 1 */
+#container_div87 {
+    transform: rotate(45deg);
+    background-color: rgb(30, 153, 190);
+    height: 7vh;
+    width: 16vw;
+    top: -300vh;
+    left: 7vw;
+    animation-name: container_div87;
+}
+
+@keyframes container_div87 {
+    100% {
+        top: 140vh;
+    }
+}
+
+#container_div88 {
+    transform: rotate(-45deg);
+    background-color: rgb(30, 153, 190);
+    height: 7vh;
+    width: 16vw;
+    top: -300vh;
+    left: 7vw;
+    animation-name: container_div88;
+}
+
+@keyframes container_div88 {
+    100% {
+        top: 140vh;
+    }
+}
+
+/* //////////////////////////////////////////// */
+
+/* for phone users */
+#phone_tilt {
+    z-index: 200;
+    background-color: white;
+    height: 200%;
+    width: 200%;
+    display: none;
+    font-size: 5vw;
+}
+
+@media all and (max-width: 500px) {
+    #phone_tilt {
+        display: unset;
+    }
+}
+
+@media all and (max-width: 1180px) {
+    
+    * {
+        font-family: 'Times New Roman';
+        overflow: hidden;
+    }
+    
+    #login_a {
+        top: 1%;
+        right: 12%;
+        overflow: unset;
+    }
+
+    .result_boxes {
+        background-color: rgba(255, 255, 255, 0.479);
+    }
+    
+
+    #boxes_container{
+        z-index: 1;
+        top: 0%;
+        padding-top: 6%;
+        width: 100vw;
+        padding-right: 80vw;
+    }
+
+    .phone_none {
+        display: none;
+    }
+
+    #container {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(math_game_practice_background.png);
+    }
+
+}

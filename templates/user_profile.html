@@ -1,0 +1,228 @@
+{% load static %}
+
+<html>
+
+<head>
+    <LINK rel="stylesheet" href="{% static 'user_profile/user_profile.css' %}">
+    <title> user profile </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<script src="{% static 'js/sweetalert.min.js' %}"></script>
+
+<body id="body_account">
+
+    <a href="{% url 'home' %}">
+        <div class="absolute border_radius_3vh" id="logo">
+            <div class="absolute" id="logoimg"></div>
+            <p class="p" id="cubicalblock">CubicalBlock</p>
+        </div>
+    </a>
+
+    <div class="absolute border_radius_3vh" id="user_display">
+        <p class="account_info" id="user_display_p">{{ user.username }}</p>
+        <p class="account_info" id="score_display_p">your best score {{ best_score.DB_combined }}</p>
+        {% for score in object_list %}
+        {% if score.points == best_score.points %}
+        <p class="account_info" id="rank_display_p"> your rank {{ forloop.counter }}</p>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="absolute" id="phone_tilt">
+        <p>Tilt your phone horizontally to get the best experience...</p>
+    </div>
+
+    <div id="container_account">
+
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div1"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div2"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div3"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div4"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div5"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div6"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div7"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div8"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div9"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div10"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div11"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div12"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div13"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div14"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div15"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div16"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div17"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div18"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div19"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div20"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div21"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div22"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div23"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div24"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div25"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div26"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div27"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div28"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div29"></div>
+        <div class="absolute_account iteration_account rotate_account blur_account radius_account phone_none"
+            id="container_account_div30"></div>
+
+    </div>
+
+    <!-- <a href="{% url 'logout' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"></a> -->
+
+
+    <button type="submit" onclick="Alert()" class="absolute border_radius_3vh border" id="btn-submit">delete your
+        account</button>
+    <form method='post' id="test1">
+        {% csrf_token %}
+    </form>
+
+    <div class="absolute border_radius_3vh" id="ask">
+        <p class="p" id="ask_p">if have any questions, you can contact us on our email cubicalblocks@gmail.com</p>
+    </div>
+
+    <a href="{% url 'logout' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+        <div class="absolute border_radius_3vh border login_signup center" id="logout">
+            <p class="p" id="Logout_p">Logout</p>
+        </div>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="absolute" id="faq">
+
+        <p class="faq_p" id="faq_p1">shiasfdmlkasnbdk hajslkndb
+            kahsjldbaksdlij;aknslbkvhdyguhlai;sjolmdknbjavhksbuihdjo;'kmlanskab</p>
+        <p class="faq_p" id="faq_p2">shiasfdmlkasnbdk hajslkndb
+            kahsjldbaksdlij;aknslbkvhdyguhlai;sjolmdknbjavhksbuihdjo;'kmlanskab</p>
+        <p class="faq_p" id="faq_p3">shiasfdmlkasnbdk hajslkndb
+            kahsjldbaksdlij;aknslbkvhdyguhlai;sjolmdknbjavhksbuihdjo;'kmlanskab</p>
+        <p class="faq_p" id="faq_p4">shiasfdmlkasnbdk hajslkndb
+            kahsjldbaksdlij;aknslbkvhdyguhlai;sjolmdknbjavhksbuihdjo;'kmlanskab</p>
+        <p class="faq_p" id="faq_p5">shiasfdmlkasnbdk hajslkndb
+            kahsjldbaksdlij;aknslbkvhdyguhlai;sjolmdknbjavhksbuihdjo;'kmlanskab</p>
+        <p class="faq_p" id="faq_p6">shiasfdmlkasnbdk hajslkndb
+            kahsjldbaksdlij;aknslbkvhdyguhlai;sjolmdknbjavhksbuihdjo;'kmlanskab</p>
+        <p class="faq_p" id="faq_p7">shiasfdmlkasnbdk hajslkndb
+            kahsjldbaksdlij;aknslbkvhdyguhlai;sjolmdknbjavhksbuihdjo;'kmlanskab</p>
+        <p class="faq_p" id="faq_p8">shiasfdmlkasnbdk hajslkndb
+            kahsjldbaksdlij;aknslbkvhdyguhlai;sjolmdknbjavhksbuihdjo;'kmlanskab</p>
+        <p class="faq_p" id="faq_p9">shiasfdmlkasnbdk hajslkndb
+            kahsjldbaksdlij;aknslbkvhdyguhlai;sjolmdknbjavhksbuihdjo;'kmlanskab</p>
+        <p class="faq_p" id="faq_p10">shiasfdmlkasnbdk hajslkndb
+            kahsjldbaksdlij;aknslbkvhdyguhlai;sjolmdknbjavhksbuihdjo;'kmlanskab</p>
+
+    </div> -->
+
+</body>
+<!-- <LINK rel="stylesheet" href="{% static 'css/styles.css' %}"> -->
+
+<script src="{% static 'user_profile/user_profile.js' %}"></script>
+
+
+
+<script type="text/javascript">
+    form = document.getElementById('test1')
+    function Alert() {
+        swal({
+            title: "Are you sure?",
+            text: "Your account will be deleted permanently",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    form.submit();
+                }
+            });
+    }
+
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- document.getElementById("container_account").style.backgroundColor = "rgb(33, 48, 48)";
+document.getElementById("account_info").style.Color = "rgb(0, 181, 194)";
+document.getElementById("user_display").style.backgroundColor = "rgba(23, 97, 116, 0.815)";
+document.getElementById("ask").style.backgroundColor = "rgba(23, 97, 116, 0.815)";
+document.getElementById("ask_p").style.Color = "rgb(0, 181, 194)"; -->

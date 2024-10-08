@@ -1,0 +1,463 @@
+/* for a lot of elemints */
+.absolute {
+  position: absolute;
+}
+.p {
+  font-size: 4em;
+}
+/*body*/
+body {
+  margin: 0%;
+  font-family: cursive, fantasy, 'Times New Roman';
+  overflow: hidden;
+  background-image: url("core/assets/css/57b.png");
+
+}
+::placeholder {
+  font-size: 1.2em;
+  color: rgb(109, 109, 109);
+}
+.border_radius_3vh {
+  border-bottom-left-radius: 3.5vh;
+  border-top-left-radius: 3.5vh;
+  border-top-right-radius: 3.5vh;
+  border-bottom-right-radius: 3.5vh;
+}
+.labels {
+  font-size: 1.5em;
+}
+.inputs {
+  background-color: rgb(240, 240, 240);
+  height: 7vh;
+  width: 31.5vw;
+  border: solid;
+  border-color: rgb(138, 138, 138);
+  outline: none;
+  transition: 0.5s;
+}
+.inputs:hover {
+  background-color: rgb(219, 219, 219);
+}
+.inputs:active {
+  background-color: rgb(192, 192, 192);
+  border-color: rgb(88, 88, 88);
+}
+a {
+  color: rgb(46, 112, 253);
+}
+a:hover {
+  color: rgb(0, 0, 255);
+}
+.button {
+  border-color: rgb(138, 138, 138);
+  border-style: solid;
+  height: 10vh;
+  width: 13vw;
+  border-bottom-left-radius: 5.2vh;
+  border-top-left-radius: 5.2vh;
+  border-top-right-radius: 5.2vh;
+  border-bottom-right-radius: 5.2vh;
+  font-size: 2.5em;
+  transition: 0.5s;
+  font-family: cursive, fantasy, 'Times New Roman';
+}
+/*login*/
+#login {
+  top: -5vh;
+  left: 18vw;
+  height: 15vh;
+  width: 8vw;
+}
+#username_login_label {
+  top: 23vh;
+  left: 7vw;
+}
+#username_input {
+  top: 31vh;
+  left: 6vw;
+}
+#passwored_login_label {
+  top: 37vh;
+  left: 7vw;
+}
+#password_input {
+  top: 45vh;
+  left: 6vw;
+}
+#Remember_me_label {
+  top: 51vh;
+  left: 7vw;
+}
+#remember_me_checkbox {
+  height: 2vh;
+  width: 1vw;
+  top: 55.5vh;
+  left: 17.5vw;
+}
+#login_button {
+  background-color: rgb(61, 227, 27);
+  top: 70vh;
+  left: 16.5vw;
+}
+#login_button:hover {
+  background-color: rgb(34, 202, 0);
+}
+#forgot_password_label {
+  top: 88vh;
+  left: 16.5vw;
+  font-size: 1.2em;
+}
+/* spacer */
+#spacer {
+  border: solid;
+  border-width: 1vh;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  top: -50vh;
+  left: 50vw;
+  border-color: rgb(146, 146, 146);
+  height: 200vh;
+}
+/*sign up form*/
+#sign_up {
+  top: -5vh;
+  left: 70vw;
+  height: 15vh;
+  width: 14vw;
+}
+#email_sign_up_label {
+  top: 21vh;
+  left: 62vw;
+}
+#email_input {
+  top: 29vh;
+  left: 61vw;
+}
+#username_sign_up_label {
+  top: 35vh;
+  left: 62vw;
+}
+#username_sign_up_input {
+  top: 43vh;
+  left: 61vw;
+}
+#passwored_sign_up_label {
+  top: 49vh;
+  left: 62vw;
+}
+#password_sign_up_input {
+  top: 57vh;
+  left: 61vw;
+}
+#confirm_passwored_sign_up_label {
+  top: 63vh;
+  left: 62vw;
+}
+#confirm_password_sign_up_input {
+  top: 71vh;
+  left: 61vw;
+}
+#sign_up_button {
+  background-color: rgb(47, 27, 227);
+  top: 81.5vh;
+  left: 70vw;
+}
+#sign_up_button:hover {
+  background-color: rgb(40, 21, 204);
+}
+#agreement {
+  top: 92vh;
+  left: 62vw;
+  width: 28vw;
+  font-size: 1em;
+}
+/* styles for all elemints */
+.login_signup {
+  top: 3vh;
+  height: 6vh;
+  width: 9.5vw;
+  transition: 0.2s;
+}
+.on_off {
+  display: none;
+}
+.divs {
+  position: absolute;
+  height: 15vh;
+  width: 20vw;
+  transition: 0.2s;
+  left: -1.2vw;
+}
+.p {
+  pointer-events: none;
+  position: absolute;
+  font-size: 3em;
+}
+.border_radius_3vh {
+  border-bottom-left-radius: 3vh;
+  border-top-left-radius: 3vh;
+  border-top-right-radius: 3vh;
+  border-bottom-right-radius: 3vh;
+}
+.absolute {
+  position: absolute;
+}
+.border {
+  border: solid;
+  border-color: rgb(150, 150, 150);
+  border-width: 0.7vh;
+}
+.transform {
+  transform: translate(-50%, -50%);
+}
+.just {
+  top: 6%;
+  left: 50%;
+  color: rgb(75, 75, 75);
+}
+.practice_games {
+  height: 24vh;
+  width: 24vw;
+  transition: 0.2s;
+}
+.practice_games:hover {
+  border-color: rgb(131, 131, 131);
+}
+
+/*login/signup*/
+#home_login {
+  border-width: 0.5vh;
+  left: 0.5vw;
+  background-color: rgb(79, 240, 47);
+}
+#home_login:hover {
+  background-color: rgb(55, 212, 23);
+}
+#login_p {
+  font-size: 1.6em;
+  top: -50%;
+  left: 30%;
+}
+#signup {
+  border-width: 0.5vh;
+  left: 11vw;
+  background-color: rgb(58, 45, 240);
+}
+#signup:hover {
+  background-color: rgb(38, 26, 211);
+}
+#signup_p {
+  font-size: 1.6em;
+  top: -50%;
+  left: 23%;
+}
+/*center elements*/
+#play {
+  top: 20vh;
+}
+#practice {
+  top: 36vh;
+}
+#party {
+  top: 52vh;
+}
+#scoreboard {
+  top: 68vh;
+}
+/* plays elemints */
+#This_weeks_game {
+  width: 16vw;
+  top: 5%;
+  left: 56.5%;
+}
+#start_playing {
+  height: 18vh;
+  width: 18vw;
+  top: 70%;
+  left: 55%;
+  transition: 0.2s;
+}
+#start_playing:hover {
+  border-color: rgb(131, 131, 131);
+}
+#start_playing_p {
+  top: 12%;
+  left: 50%;
+}
+/* practice elemints */
+#math_game {
+  top: 10%;
+  left: 36%;
+}
+#maze_game {
+  top: 10%;
+  left: 61.5%;
+}
+#pictures_game {
+  top: 37%;
+  left: 36%;
+}
+#coming_soon1 {
+  top: 37%;
+  left: 61.5%;
+}
+#coming_soon2 {
+  top: 64%;
+  left: 36%;
+}
+#coming_soon3 {
+  top: 64%;
+  left: 61.5%;
+}
+/* centering of p for all of the divs */
+#math_game_p {
+  top: 4%;
+  left: 2%;
+}
+#maze_game_p {
+  top: 4%;
+  left: 1%;
+}
+#pictures_game_p {
+  top: 4%;
+  left: 9%;
+}
+/* party elemints */
+#join_a_lobby {
+  width: 20vw;
+  top: -3vh;
+  left: 46.5vw;
+}
+#join_a_lobby_code {
+  border-width: 0.5vh;
+  width: 18vw;
+  top: 25vh;
+  left: 40vw;
+  font-size: 2em;
+  transition: 0.2s;
+  outline: none;
+}
+/* this is to remove the up down arrow */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#join_a_lobby_code:hover {
+  background-color: rgb(238, 238, 238);
+}
+#join_a_lobby_code:focus {
+  border-color: rgb(112, 112, 112);
+}
+#join_a_lobby_button {
+  height: 15vh;
+  width: 9vw;
+  left: 63vw;
+  top: 20.5vh;
+}
+#join_a_lobby_button_p {
+  top: 5%;
+  left: 50%;
+}
+#create_a_lobby {
+  width: 23vw;
+  top: 50vh;
+  left: 44.3vw;
+}
+#create_a_lobby_p {
+  font-size: 2em;
+}
+#host_a_lobby_button {
+  height: 15vh;
+  width: 20vw;
+  top: 65vh;
+  left: 45.5vw;
+}
+#host_a_lobby_p {
+  top: -25%;
+}
+/* scoreboard elemints */
+#current_competition {
+  width: 16vw;
+  top: -3vh;
+  left: 45vw;
+}
+#your_score {
+  width: 25vw;
+  top: 30vh;
+  left: 40vw;
+}
+#your_score_p {
+  font-size: 1.6em;
+}
+#your_time {
+  width: 25vw;
+  top: 40vh;
+  left: 40vw;
+}
+#your_time_p {
+  font-size: 1.6em;
+}
+#download_full_scoreboard {
+  height: 10vh;
+  width: 20vw;
+  top: 80vh;
+  left: 40vw;
+}
+#download_full_scoreboard_p {
+  font-size: 1.6em;
+  top: -8%;
+}
+#scoreboard_table {
+  top: 8vh;
+  left: 70vw;
+  border-collapse: collapse;
+}
+.first_row {
+  padding-top: 0.7vh;
+}
+.last_row {
+  padding-bottom: 0.7vh;
+}
+.top_left {
+  border-top-left-radius: 3vh;
+}
+.top_right {
+  border-top-right-radius: 3vh;
+}
+.bottom_left {
+  border-bottom-left-radius: 3vh;
+}
+.bottom_right {
+  border-bottom-right-radius: 3vh;
+}
+#username {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 1.5vh;
+  padding-top: 1.5vh;
+}
+th {
+  text-align: center;
+  padding: 1vh;
+  background-color: rgba(148, 148, 148, 0.8);
+}
+td {
+  text-align: center;
+  padding: 2.2vh;
+  background-color: rgba(148, 148, 148, 0.5);
+}
+/*discord*/
+#discord {
+  bottom: 1vh;
+  right: 0.5vw;
+  background-image: url(discored.png);
+  height: 4.5vh;
+  width: 4.5vh;
+  border-radius: 50%;
+  border: solid;
+  border-color: rgb(97, 97, 97);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

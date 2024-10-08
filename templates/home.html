@@ -1,0 +1,434 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<a href="{% url 'home' %}">
+  <div class="absolute center" id="logo">
+    <div class="absolute" id="logoimg"></div>
+    <p class="p" id="cubicalblock">CubicalBlock</p>
+  </div>
+</a>
+
+
+{% if user.is_authenticated %}
+<div class="absolute border_radius_3vh center" id="user_display">
+  <a id="user_display_a" href="{% url 'user_profile' %}">
+    <p class="just" id="user_display_p">{{ user.username }}</p>
+  </a>
+</div>
+
+<!-- <a href="{% url 'logout' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+  <div class="absolute border_radius_3vh border login_signup center" id="logout">
+    <p class="p" id="Logout_p">Logout</p>
+  </div>
+</a> -->
+
+{% else %}
+<a class="absolute" id="login_a" href="{% url 'login_register' %}" style="color:black;">
+  <div class=" absolute border_radius_3vh border login_signup center" id="home_login">
+    <p class="p" id="login_p">Login</p>
+  </div>
+</a>
+
+{% endif %}
+
+<div class="absolute" id="phone_tilt">
+  <p>Tilt your phone horizontally
+    <br>
+    to get the best experience...
+  </p>
+</div>
+
+<div class="absolute border_radius_3vh" id="inner_background"></div>
+
+<div class="absolute border_radius_3vh on_off center" id="beta">
+  <p class="p" id="beta_p">Beta version, no competition has started yet.</p>
+</div>
+
+
+
+
+
+
+
+<div class="divs border border_radius_3vh center" id=play>
+  <p class="p just" id="just_play">Play</p>
+
+  <video class="inside_background_videos border_radius_videos phone_none" id="blue" autoplay loop muted>
+
+    <source src="{% static 'videos/blue.mp4' %}" type="video/mp4">
+
+  </video>
+
+</div>
+
+<div class="absolute on_off" id="This_weeks_game_tital">
+  <p class="p" id="This_weeks_game_tital_p">This Week's Game</p>
+</div>
+
+<div class="absolute on_off" id="This_weeks_game">
+  <p class="p" id="This_weeks_game_p">Missing Figures</p>
+</div>
+
+<div class="absolute on_off" id="prize">
+
+  <p class="p" id="current_prize_p">Current prize: <a class="" id="current_prize_value">30$</a></p>
+
+  <div class="absolute border_radius_3vh center" id="prize_explanation">
+    <p class="p" id="prize_explanation_p">
+      The prize will increase with more participants, share this website with your friends, challenge them to get a
+      better score than you!
+    </p>
+  </div>
+
+</div>
+
+<div class="absolute on_off" id="your_rank">
+  <p class="p" id="your_rank_p">
+    {% for score in object_list %}
+    {% if score.points == best_score.points %}
+    Your rank: {{ forloop.counter }}
+    {% endif %}
+    {% endfor %}</p>
+</div>
+
+<a href="{% url 'math_game' %}">
+  <div onclick="" class="absolute border_radius_3vh border on_off center" id="start_playing">
+    <p class="p" id="start_playing_p">Compete</p>
+  </div>
+</a>
+
+
+
+
+
+
+
+
+
+
+
+<div class="divs border border_radius_3vh center" id="practice">
+  <p class="p just" id="just_practice">Practice</p>
+
+  <video class="inside_background_videos border_radius_videos phone_none" id="blue" autoplay loop muted>
+
+    <source src="{% static 'videos/red.mp4' %}" type="video/mp4">
+
+  </video>
+
+</div>
+
+<a href="{% url 'math_game_practice' %}">
+  <div onclick="" class="practice_games border absolute border_radius_3vh on_off center" id="math_game">
+    <p class="p" id="math_game_p">Missing Figures</p>
+  </div>
+</a>
+
+<a href="{% url 'pictures_game_practice' %}">
+  <div onclick="" class="practice_games border absolute border_radius_3vh on_off center" id="pictures_game">
+    <p class="p" id="pictures_game_p">Sliced Puzzle</p>
+  </div>
+</a>
+
+<a href="">
+  <div onclick="" class="practice_games border absolute border_radius_3vh on_off center" id="maze_game">
+    <p class="p" id="maze_game_p">Coming soon !!!</p>
+  </div>
+</a>
+
+<!-- <div onclick="" class="practice_games border absolute border_radius_3vh on_off center" id="coming_soon1">
+  <p class="p" id="coming_soon1_p">coming soon</p>
+</div>
+<div onclick="" class="practice_games border absolute border_radius_3vh on_off center" id="coming_soon2">
+  <p class="p" id="coming_soon2_p">coming soon</p>
+</div>
+<div onclick="" class="practice_games border absolute border_radius_3vh on_off center" id="coming_soon3">
+  <p class="p" id="coming_soon3_p">coming soon</p>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+<div class="divs border border_radius_3vh center" id="party">
+  <p class="p just" id="just_party">Session</p>
+
+  <video class="inside_background_videos border_radius_videos phone_none" id="blue" autoplay loop muted>
+
+    <source src="{% static 'videos/green.mp4' %}" type="video/mp4">
+
+  </video>
+
+</div>
+
+<div class="absolute border_radius_3vh on_off center" id="host_a_lobby_button">
+  <p class="p" id="host_a_lobby_p">Coming soon !</p>
+</div>
+
+<div class="absolute border_radius_3vh on_off center" id="party_explanation">
+  <p class="p" id="party_explanation_p">Here you will be able to compete with your friends in a separate session, that
+    will be coming soon, stay tuned.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="divs border border_radius_3vh center" id="scoreboard">
+  <p class="p just" id="just_scoreboard">Scoreboard</p>
+
+  <video class="inside_background_videos border_radius_videos phone_none" id="blue" autoplay loop muted>
+
+    <source src="{% static 'videos/purple.mp4' %}" type="video/mp4">
+
+  </video>
+
+</div>
+
+<div class="absolute border_radius_3vh on_off center" id="descriptions">
+  <p class="p" id="descriptions_p">
+    Be number 1 on the leaderboard to win the prize.
+    <br>
+    <br>
+    Current prize:30$
+    <br>
+    <br>
+    A new competition will start every week, this competition will end on: 20/12/2022
+    <br>
+    <br>
+    Your best score: {{best_score.DB_combined}}
+
+    <br>
+    {% for score in object_list %}
+    {% if score.points == best_score.points %}
+    Your rank: {{ forloop.counter }}
+    {% endif %}
+    {% endfor %}
+  </p>
+
+</div>
+
+<table class="absolute on_off" id="scoreboard_table">
+
+  <tr>
+    <th class="top_left" id="rank">rank</th>
+    <th id="username">username</th>
+    <th class="top_right" id="points">points</th>
+  </tr>
+
+  {% for score in object_list|slice:":10" %}
+  <tr>
+    <td class="first_row">{{forloop.counter}}</td>
+    <td class="first_row">{{ score.user.username }}</td>
+    <td class="first_row">{{ score.DB_combined }}</td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+
+
+<!-- This area is offisde only for the darktheam -->
+<!-- Dark_theme area -->
+{% if best_score.Dark_Theam %}
+<!-- If dark theme is on  -->
+
+
+
+{% else %}
+<!-- if dark theme is off -->
+
+
+
+{% endif %}   
+<div class="absolute center" id="dark_theam">
+  <p class="absolute" id="dark_theam_p">Dark Theme:</p>
+  <button class="absolute" id="dark_theam_button"onclick="Dark_Theam()"></button>
+  <div class="absolute" id="ball"></div>
+</div>
+
+
+<script type="text/javascript">
+  function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+          const cookies = document.cookie.split(';');
+          for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+            }
+          }
+        }
+        return cookieValue;
+      }
+      const csrftoken = getCookie('csrftoken');
+
+  function Dark_Theam() {
+    $.ajax({
+      url: 'http://127.0.0.1:8000/',
+      method: 'POST',
+      data: {
+        csrfmiddlewaretoken: csrftoken
+      },
+      success: function (response) {
+        console.log("Working")
+      }
+    });
+    location.reload();
+  }
+
+</script>
+
+
+
+
+
+<div class="bodies absolute" id="body1">
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div1"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div2"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div3"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div4"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div5"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div6"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div7"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div8"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div9"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div10"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div11"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div12"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div13"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div14"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div15"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div16"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div17"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div18"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div19"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div20"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div21"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div22"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div23"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div24"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div25"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div26"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div27"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div28"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div29"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body1div30"></div>
+</div>
+
+<div class="bodies absolute" id="body2">
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div1"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div2"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div3"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div4"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div5"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div6"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div7"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div8"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div9"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div10"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div11"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div12"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div13"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div14"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div15"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div16"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div17"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div18"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div19"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div20"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div21"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div22"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div23"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div24"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div25"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div26"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div27"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div28"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div29"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body2div30"></div>
+</div>
+
+<div class="bodies absolute" id="body3">
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div1"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div2"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div3"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div4"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div5"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div6"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div7"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div8"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div9"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div10"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div11"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div12"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div13"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div14"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div15"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div16"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div17"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div18"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div19"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div20"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div21"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div22"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div23"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div24"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div25"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div26"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div27"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div28"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div29"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body3div30"></div>
+</div>
+
+<div class="bodies absolute" id="body4">
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div1"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div2"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div3"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div4"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div5"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div6"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div7"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div8"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div9"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div10"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div11"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div12"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div13"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div14"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div15"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div16"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div17"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div18"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div19"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div20"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div21"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div22"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div23"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div24"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div25"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div26"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div27"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div28"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div29"></div>
+  <div class="absolute iteration rotate blur_main radius phone_none" id="body4div30"></div>
+</div>
+{% endblock content %}
